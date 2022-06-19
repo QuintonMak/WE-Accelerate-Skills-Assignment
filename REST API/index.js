@@ -11,7 +11,7 @@ const basePath = "/";
 
 import bodyParser from "body-parser";
 import cors from "cors";
-//app.use(bodyParser).use(cors);
+app.use(bodyParser.json()).use(cors());
 
 import data from './data.js';
 app.get('/movies', (req, res) => {
