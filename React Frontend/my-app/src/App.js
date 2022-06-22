@@ -3,6 +3,7 @@ import React from 'react'
 //import ReactDOM from 'react-dom'
 import './App.css';
 import MovieList from './movieList.js';
+import SearchBar from './searchBar.js';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <h2>
         <strong>Movie Data Finder</strong>
       </h2>
-
+      <SearchBar/>
       <MovieList/>
     </div>
   );
