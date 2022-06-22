@@ -3,7 +3,7 @@ import {gql} from 'apollo-server';
 const typeDefs = gql`
     type Query {
         movies: [Movie]
-        movie(id: ID!): Movie
+        movie(id: ID, name: String): Movie
     }
 
     type Movie {

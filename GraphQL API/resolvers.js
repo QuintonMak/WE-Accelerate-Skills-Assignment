@@ -7,13 +7,20 @@ const Query = {
                 .catch(error => console.error(error));
         return movies;
     },
-    movie: (parent, args, context, info) => {
-        const {id} = args;
 
-        const movie = fetch(`${basePath}/movies/${id}`)
-                        .then(res => res.json())
-                        .catch(error => console.error(error));
-        return movie;
+    // can query a movie based on id or name
+    movie: (parent, args, context, info) => {
+        const {id, name} = args;
+        if (id) {
+            return fetch(`${basePath}/movies?id=${id}`)
+            .then(res => res.json())
+            .catch(error => console.error(error));
+        } else if (name) {
+            return fetch(`${basePath}/movies/?name=${name}`)
+            .then(res => res.json())
+            .catch(error => console.error(error));
+        }
+        return null;
 
     }
 }
