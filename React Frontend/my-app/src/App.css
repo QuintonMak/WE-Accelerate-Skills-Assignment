@@ -46,3 +46,8 @@ button {
 button:hover{
   background-color: whitesmoke;
 }
+
+img {
+  max-width: 200px;
+  margin: 10px;
+}

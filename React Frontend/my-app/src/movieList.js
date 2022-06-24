@@ -47,7 +47,7 @@ function MovieList(props) {
 
     return (
         <div>
-            {movies.map(movieData => <Movie {...movieData}/>)}
+            {movies.map(movieData => <Movie {...movieData} key={movieData.id}/>)}
         </div>
     );
 };

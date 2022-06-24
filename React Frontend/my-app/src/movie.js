@@ -13,7 +13,7 @@ function Movie(props) {
                     <li>Release Date: {props.date}</li>
                     <li>Director: {props.director}</li>
                     <li>Rotten Tomatoes Score: {props.score}</li>
-                    <img src={"./images/" + props.id + ".jpg"} alt={ "The movie is " + props.name}/>
+                    <img src={"images/" + props.id + ".jpg"} alt={ "The movie is " + props.name}/>
                 </ul>
             </div>
         );

@@ -13,6 +13,7 @@ function searchResult ({name}) {
     const query = gql`
     query Query($name: String){
         movie(name: $name) {
+            id
             name
             director
             date
@@ -37,6 +38,7 @@ function searchResult ({name}) {
             <li>Release Date: {data.movie.date}</li>
             <li>Director: {data.movie.director}</li>
             <li>Rotten Tomatoes Score: {data.movie.score}</li>
+            <img src={"images/" + data.movie.id + ".jpg"} alt={ "The movie is " + data.movie.name}/>
         </ul>  
     </div>
     );
