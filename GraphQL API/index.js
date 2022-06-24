@@ -1,6 +1,6 @@
 import {ApolloServer} from 'apollo-server';
 const {PORT = 3030 } = process.env;
-import typeDefs from './typeDefs.js';
+import typeDefs from './typedefs.js';
 import resolvers from './resolvers.js';
 
 
